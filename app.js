@@ -31,7 +31,7 @@ app.post('/news/create', function(request, response) {
     let news = request.body
 
     // save 
-    console.log(news)
+    newsCollection.insert(news)
 
     response.status(200).json({ message: 'ok' })
 
