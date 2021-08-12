@@ -20,11 +20,10 @@ app.get('/', function (req, res) {
 })
 
 app.get('/news', function(request, response) {
-    response.json([
-        { id: 0, content: 'abc' },
-        { id: 1, content: 'def' },
-        { id: 2, content: 'ghi' }
-    ])
+
+    newsCollection.find({}).then(function(docs){
+        response.json(docs)
+    })
 })
 
 app.post('/news/create', function(request, response) {
