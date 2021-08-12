@@ -1,4 +1,6 @@
 const express = require('express')
+const db = require('monk')('localhost/newsDB')
+
 const app = express()
 
 app.use(express.json());
