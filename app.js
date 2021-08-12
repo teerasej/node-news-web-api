@@ -17,6 +17,13 @@ app.get('/news', function(request, response) {
 
 app.post('/news/create', function(request, response) {
 
+    let news = request.body
+
+    // save 
+    console.log(news)
+
+    response.status(200).json({ message: 'ok' })
+
 })
 
 app.listen(3000, function(){
