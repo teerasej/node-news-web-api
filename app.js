@@ -7,12 +7,12 @@ app.use(express.json());
  
 
 let newsCollection = db.get('news')
-newsCollection.drop()
-newsCollection.insert([
-    { content: 'abc' },
-    { content: 'def' },
-    { content: 'ghi' }
-])
+// newsCollection.drop()
+// newsCollection.insert([
+//     { content: 'abc' },
+//     { content: 'def' },
+//     { content: 'ghi' }
+// ])
 
 
 app.get('/', function (req, res) {
