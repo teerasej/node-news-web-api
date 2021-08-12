@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 app.get('/news', function(request, response) {
 
-    newsCollection.find({}).then(function(docs){
+    newsCollection.find({}, {sort: {_id: -1}}).then(function(docs){
         response.json(docs)
     })
 })
