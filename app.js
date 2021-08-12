@@ -9,6 +9,9 @@ app.get('/news', function(request, response) {
     
 })
 
+app.post('/news/create', function(request, response) {
+    
+})
 
 app.listen(3000, function(){
     console.log('server is running...')
