@@ -24,7 +24,7 @@ app.get('/news', function(request, response) {
 app.post('/news/create', function(request, response) {
 
     let news = request.body
-
+    console.log(news)
     // save 
     newsCollection.insert(news)
 
