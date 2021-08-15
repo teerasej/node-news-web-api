@@ -1,18 +1,13 @@
+const cors = require('cors')
 const express = require('express')
 const db = require('monk')('localhost/newsDB')
 
 const app = express()
 
-app.use(express.json());
- 
+app.use(express.json())
+app.use(cors())
 
 let newsCollection = db.get('news')
-// newsCollection.drop()
-// newsCollection.insert([
-//     { content: 'abc' },
-//     { content: 'def' },
-//     { content: 'ghi' }
-// ])
 
 
 app.get('/', function (req, res) {
