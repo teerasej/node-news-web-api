@@ -30,6 +30,6 @@ const db = require('monk')('localhost/newsDB')
 
 This Web API will work with following project: 
 
-- Flutter 
+- [Flutter](https://github.com/teerasej/flutter_news_app_simple) 
 
 
