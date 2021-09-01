@@ -11,7 +11,7 @@ let newsCollection = db.get('news')
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('OK')
 })
 
 app.get('/news', function(request, response) {
@@ -24,6 +24,17 @@ app.get('/news', function(request, response) {
 app.post('/news/create', function(request, response) {
 
     let news = request.body
+
+    if(!news.content) {
+        response.status(400).send('missing [content] in json')
+        return;
+    }
+
+    if(!news.sender) {
+        response.status(400).send('missing [sender] in json')
+        return;
+    }
+
     console.log(news)
     // save 
     newsCollection.insert(news)
